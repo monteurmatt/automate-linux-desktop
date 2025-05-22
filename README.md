@@ -75,6 +75,9 @@
 | `Fragments`                  | Cliente de torrent simples e moderno.                                     |
 | `Boxes`                      | Aplicativo de máquinas virtuais do GNOME.                                 |
 | `LocalSend`                  | Envia arquivos entre dispositivos na mesma rede local.                    |
+| `ranger`               | Gerenciador de arquivos no terminal com navegação em árvore.              |
+| `speedtest-cli`        | Ferramenta de linha de comando para testar a velocidade da internet.     |
+| `btop`                 | Monitor de sistema interativo com visual moderno no terminal.            |
 
 ---
 
@@ -102,8 +105,8 @@
 
 ### 📌 Observações
 
-Todos os aplicativos listados acima foram instalados via Flathub:
-
+Todos os aplicativos listados acima foram instalados via Flathub:  
+*Com exceção do: `docker, docker compose, ranger, speedtest-cli e btop` que tiveram a instalação  normal via `sudo dnf` e apareceram na listagem de apps acima.*
 ```bash
 flatpak install flathub <nome-do-aplicativo>
 ```
