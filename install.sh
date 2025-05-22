@@ -69,10 +69,9 @@ flatpak install flathub com.visualstudio.code
 
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
-sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock -y
-gnome-extensions enable dash-to-dock@micxgx.gmail.com
+sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel -y
+gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
-gnome-extensions enable just-perfection-desktop@just-perfection
 
 # Instalar e habilitar via extensions-cli o 'Start Overlay in Application View' (Super Key para menu de apps)
 sudo dnf install gnome-extensions-cli -y
