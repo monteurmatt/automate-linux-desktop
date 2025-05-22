@@ -15,7 +15,29 @@
 
 - Adiciona área de ícones para mostrar apps em segundo plano na barra superior
 
-- Adiciona barra inferior com menu, favoritos centralizados e ocultação automática
+- Adiciona barra inferior com menu, favoritos centralizados e ocultação automática  
+
+<br>
+
+### Menu com apps baixados após execução do script:  
+![Menu com apps baixaddos após execução script](img/apps.png)  
+
+<br>
+
+### Pré-visualização ao passar o mouse (extensão):  
+![Pré-visualização mínima ao passar o mouse (extensão)](img/mini-preview.png)  
+
+<br>
+
+### Barra se esconde ao ser sobreposta (extensão):  
+![Barra se esconde ao ser sobreposta (extensão)](img/sobreposição-barra.png)  
+
+<br>
+
+### Ícones de apps em segundo plano (extensão):  
+![Ícones de apps em segundo plano (extensão)](img/apps-segundo-plano.png)  
+
+<br>
 
 ---
 
