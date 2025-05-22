@@ -6,6 +6,19 @@
 
 ---
 
+🔧 Funcionalidades do script
+- Instala aplicativos e utilitários populares essenciais no dia a dia
+
+- Prepara o sistema com ferramentas para melhorar a compatibilidade com jogos
+
+- Adiciona extensão para abrir o menu de apps com a tecla Super
+
+- Adiciona área de ícones para mostrar apps em segundo plano na barra superior
+
+- Adiciona barra inferior com menu, favoritos centralizados e ocultação automática
+
+---
+
 ### 📋 Lista de aplicativos Flatpak com as descrições curtas para ajudar na identificação:  
 
 ---
