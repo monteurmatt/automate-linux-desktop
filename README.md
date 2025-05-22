@@ -15,13 +15,13 @@
 | Aplicativo                    | Descrição                                                                 |
 |------------------------------|---------------------------------------------------------------------------|
 | `ProtonPlus`                 | Interface gráfica para gerenciar e instalar versões do Proton personalizadas. |
+| `ProtonUp-Qt`                | Gerenciador gráfico para instalar Proton GE, Wine GE e similares.         |
 | `steam-rom-manager`          | Adiciona ROMs de consoles à Steam com arte personalizada.                  |
 | `SGDBoop`                    | Aplica imagens personalizadas da SteamGridDB à sua biblioteca Steam.      |
 | `Cemu`                       | Emulador de Nintendo Wii U para PC.                                       |
 | `Bottles`                    | Gerenciador de ambientes Wine para rodar apps e jogos de Windows no Linux.|
 | `HeroicGamesLauncher`        | Launcher alternativo para Epic Games Store e GOG.                         |
 | `Sunshine`                   | Host para streaming de jogos via Moonlight (como NVIDIA GameStream).      |
-| `ProtonUp-Qt`                | Gerenciador gráfico para instalar Proton GE, Wine GE e similares.         |
 | `Lutris`                     | Plataforma que gerencia jogos de várias fontes (Steam, Windows, emuladores)|
 
 ---
