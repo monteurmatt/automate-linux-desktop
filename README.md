@@ -6,7 +6,7 @@
 
 ---
 
-### Lista de aplicativos Flatpak com as descrições curtas para ajudar na identificação:  
+### 📋 Lista de aplicativos Flatpak com as descrições curtas para ajudar na identificação:  
 
 ---
 
