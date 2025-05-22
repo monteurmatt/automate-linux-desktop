@@ -1,2 +1,2 @@
-#automate-fedora
-##Script de automação do Fedora Linux.
+# automate-fedora
+## Script de automação do Fedora Linux.
