@@ -107,7 +107,7 @@ flatpak install flathub <nome-do-aplicativo>
 ```
 
 ### 🎮 Rodar jogos da Steam (Windows) no Linux:
-Para jogar títulos da Steam disponíveis apenas para Windows (ou macOS) no Linux, use o ProtonUp-Qt ou ProtonPlus para baixar o GE-Proton na versão mais atual (recomandado)
+Para jogar títulos da Steam disponíveis apenas para Windows (ou macOS) no Linux, use o ProtonUp-Qt ou ProtonPlus para baixar o GE-Proton na versão mais atual (recomandado)  
 Depois, na Steam, vá até o jogo desejado → clique na engrenagem → Propriedades → Compatibilidade → marque a opção para forçar compatibilidade e escolha o GE-Proton instalado.
 
 
