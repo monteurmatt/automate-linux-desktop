@@ -1,8 +1,8 @@
 # Automate-Fedora ⚙️
-## Script de automação do Fedora Linux.
+### Script que realiza automações para instalação de apps via DNF, Flatpak e Gext  
 
-*Utilize `install.sh` para baixar apps necessários*  
-*Utilize `/dash-to-panel-matt-configs` para configurar a extensão de forma manual ou automática*  
+*`install.sh` para baixar apps necessários*  
+*`/dash-to-panel-matt-configs` para configurar a extensão dash-to-panel de forma manual ou automática*  
 
 ---
 
