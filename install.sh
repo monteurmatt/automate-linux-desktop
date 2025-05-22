@@ -64,7 +64,7 @@ flatpak install flathub de.haeckerfelix.Fragments
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub com.visualstudio.code
 flatpak install flathub net.davidotek.pupgui2
-
+flatpak install flathub net.lutris.Lutris
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
 sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock -y
