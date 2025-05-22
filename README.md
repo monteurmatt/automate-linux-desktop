@@ -34,6 +34,11 @@
 
 <br>
 
+### Baldur's gate 3 rodando no Fedora 42 com GE-Proton10-3 + Vulkan:  
+![Baldur's gate 3 rodando no Fedora 42 com GE-Proton10-3 + Vulkan](img/BD3-Fedora.png)  
+
+<br>
+
 ### Ícones de apps em segundo plano (extensão):  
 ![Ícones de apps em segundo plano (extensão)](img/apps-segundo-plano.png)  
 
