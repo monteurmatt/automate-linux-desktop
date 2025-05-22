@@ -46,7 +46,7 @@
 
 ---
 
-### 📋 Lista de aplicativos Flatpak com as descrições curtas para ajudar na identificação:  
+### 📋 Lista de aplicativos com as descrições curtas para ajudar na identificação:  
 
 ---
 
@@ -54,9 +54,9 @@
 
 | Aplicativo                    | Descrição                                                                 |
 |------------------------------|---------------------------------------------------------------------------|
-| `ProtonPlus`                 | Interface gráfica para gerenciar e instalar versões do Proton personalizadas. |
+| `ProtonPlus`                 | Interface gráfica para gerenciar e instalar versões do Proton personalizadas.|
 | `ProtonUp-Qt`                | Gerenciador gráfico para instalar Proton GE, Wine GE e similares.         |
-| `steam-rom-manager`          | Adiciona ROMs de consoles à Steam com arte personalizada.                  |
+| `steam-rom-manager`          | Adiciona ROMs de consoles à Steam com arte personalizada.                 |
 | `SGDBoop`                    | Aplica imagens personalizadas da SteamGridDB à sua biblioteca Steam.      |
 | `Bottles`                    | Gerenciador de ambientes Wine para rodar apps e jogos de Windows no Linux.|
 | `HeroicGamesLauncher`        | Launcher alternativo para Epic Games Store e GOG.                         |
@@ -75,9 +75,23 @@
 | `Fragments`                  | Cliente de torrent simples e moderno.                                     |
 | `Boxes`                      | Aplicativo de máquinas virtuais do GNOME.                                 |
 | `LocalSend`                  | Envia arquivos entre dispositivos na mesma rede local.                    |
-| `ranger`               | Gerenciador de arquivos no terminal com navegação em árvore.              |
-| `speedtest-cli`        | Ferramenta de linha de comando para testar a velocidade da internet.     |
-| `btop`                 | Monitor de sistema interativo com visual moderno no terminal.            |
+| `ranger`                     | Gerenciador de arquivos no terminal com navegação em árvore.              |
+| `speedtest-cli`              | Ferramenta de linha de comando para testar a velocidade da internet.      |
+| `btop`                       | Monitor de sistema interativo com visual moderno no terminal.             |
+| `gnome-tweaks`               | Ferramenta para ajustar configurações avançadas do GNOME.                 |
+| `gnome-extensions-cli`       | Gerencia extensões do GNOME via terminal.                                 |
+| `start-overlay-in-application-view` | Extensão para transformar tecla Super de workspaces para menu de apps.|
+| `msttcore-fonts-installer`   | Instala fontes TrueType da Microsoft (como Arial e Times).                |
+| `Google Chrome`              | Navegador web popular do Google                                           |
+
+---
+
+### 🎨 Edição de Imagema
+
+| Aplicativo                    | Descrição                                                                 |
+|------------------------------|---------------------------------------------------------------------------|
+| `GIMP`                       | Editor de imagens avançado, similar ao Photoshop.                         |
+| `Krita`                      | Aplicativo para pintura digital e ilustração.                             |
 
 ---
 
@@ -98,15 +112,14 @@
 | Aplicativo                    | Descrição                                                                 |
 |------------------------------|---------------------------------------------------------------------------|
 | `Visual Studio Code`         | Editor de código (para desenvolvimento em geral).                         |
-| `Docker`               | Plataforma para criação e gerenciamento de containers.              |
-| `Docker Compose`       | Ferramenta para definir e gerenciar multi-containers com Docker.    |
+| `Docker`                     | Plataforma para criação e gerenciamento de containers.                    |
+| `Docker Compose`             | Ferramenta para definir e gerenciar multi-containers com Docker.          |
 
 ---
 
 ### 📌 Observações
 
-Todos os aplicativos listados acima foram instalados via Flathub:  
-*Com exceção do: `docker, docker compose, ranger, speedtest-cli e btop` que tiveram a instalação  normal via `sudo dnf` e apareceram na listagem de apps acima.*
+A maioria os aplicativos listados acima foram instalados via Flathub:  
 ```bash
 flatpak install flathub <nome-do-aplicativo>
 ```
