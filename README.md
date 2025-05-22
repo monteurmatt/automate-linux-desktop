@@ -95,6 +95,8 @@
 | Aplicativo                    | Descrição                                                                 |
 |------------------------------|---------------------------------------------------------------------------|
 | `Visual Studio Code`         | Editor de código (para desenvolvimento em geral).                         |
+| `Docker`               | Plataforma para criação e gerenciamento de containers.              |
+| `Docker Compose`       | Ferramenta para definir e gerenciar multi-containers com Docker.    |
 
 ---
 
