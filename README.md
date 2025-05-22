@@ -17,6 +17,7 @@ Disponibilizei abaixo a lista de aplicativos Flatpak com as descrições curtas 
 | `HeroicGamesLauncher`        | Launcher alternativo para Epic Games Store e GOG.                         |
 | `Sunshine`                   | Host para streaming de jogos via Moonlight (como NVIDIA GameStream).     |
 | `ProtonUp-Qt`                | Gerenciador gráfico para instalar Proton GE, Wine GE e similares.         |
+| `Lutris`                     | Plataforma que gerencia jogos de várias fontes (Steam, Windows, emuladores)|
 
 ---
 
