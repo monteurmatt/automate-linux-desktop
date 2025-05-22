@@ -45,7 +45,6 @@ flatpak install flathub com.vysp3r.ProtonPlus
 flatpak install flathub net.davidotek.pupgui2
 flatpak install flathub com.steamgriddb.steam-rom-manager
 flatpak install flathub com.steamgriddb.SGDBoop
-flatpak install flathub info.cemu.Cemu
 flatpak install flathub com.usebottles.bottles
 flatpak install flathub com.heroicgameslauncher.hgl
 flatpak install flathub dev.lizardbyte.app.Sunshine
