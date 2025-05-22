@@ -1,16 +1,14 @@
-# automate-fedora ⚙️
+# Automate-Fedora ⚙️
 ## Script de automação do Fedora Linux.
 
-
----
 *Utilize `install.sh` para baixar apps necessários*  
 *Utilize `/dash-to-panel-matt-configs` para configurar a extensão de forma manual ou automática*  
 
-&nbsp; 
+---
 
 ### Lista de aplicativos Flatpak com as descrições curtas para ajudar na identificação:  
 
-&nbsp; 
+---
 
 ### 🎮 Games & Runners
 
