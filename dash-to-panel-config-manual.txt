@@ -1,0 +1,36 @@
+Position:
+	[Panel]
+	- Ocultação inteligente do painel: True
+		[[Opções de ocultação inteligente]]
+		- Only hide the panel when it is obstructed: True
+	
+	[Order and Position on monitors]
+	- Panel thickness: 53px
+	- Dynamic: True
+	- Âncora: Centralizado
+	
+	- Botão de atividades: False
+	- Menu de data: False
+	- Menu do sistema: False
+	- Botão da área de trabalho: False
+	
+Style:
+	[Global Style]
+	Border Radius: 16px
+	
+	[AppIcon style]
+	App icon margin: 4px
+	App icon padding: 4px
+	Animate hovering app icon: True
+	Highlight hovering app icon: True
+	
+	[Panel style]
+	Override panel theme background opacity: True
+	Panel background opacity: 17
+	Override panel theme gradient: True
+	Gradient top color and opacity: purple [antepenúltima] + 8
+	Gradient bottom color and opacity: black [última] + 20
+	
+Fine-tune
+	[Gnome functionality]
+	Manter o painel superior original do gnome-shell: True

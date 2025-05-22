@@ -1,0 +1,4 @@
+#Para carregar/restaurar as configurações, basta usar o comando abaixo no terminal:   
+
+dconf load 'caminho\do\arquivo\aqui\sem\aspas' < dash-to-panel-configs-auto.txt
+
