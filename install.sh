@@ -25,8 +25,8 @@ sudo dnf remove fedora-chromium-config -y
 # GIMP e Krita 
 sudo dnf install gimp krita -y
 
-# Docker e Docker Compose (CLI e suporte via podman)
-sudo dnf install docker docker-compose podman-docker -y
+# Docker e Docker Compose 
+sudo dnf install docker docker-compose -y
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
 
@@ -42,6 +42,7 @@ sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/mst
 # Instalar ferramentas para jogos
 sudo dnf install steam -y
 flatpak install flathub com.vysp3r.ProtonPlus
+flatpak install flathub net.davidotek.pupgui2
 flatpak install flathub com.steamgriddb.steam-rom-manager
 flatpak install flathub com.steamgriddb.SGDBoop
 flatpak install flathub info.cemu.Cemu
@@ -49,6 +50,7 @@ flatpak install flathub com.usebottles.bottles
 flatpak install flathub com.heroicgameslauncher.hgl
 flatpak install flathub dev.lizardbyte.app.Sunshine
 flatpak install flathub net.lutris.Lutris
+
 
 # Instalar aplicativos em flatpak
 flatpak install flathub com.discordapp.Discord
@@ -64,7 +66,7 @@ flatpak install flathub page.codeberg.libre_menu_editor.LibreMenuEditor
 flatpak install flathub de.haeckerfelix.Fragments
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub com.visualstudio.code
-flatpak install flathub net.davidotek.pupgui2
+
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
 sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-dock -y
