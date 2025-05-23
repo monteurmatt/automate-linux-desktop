@@ -74,6 +74,7 @@ flatpak install flathub page.codeberg.libre_menu_editor.LibreMenuEditor
 flatpak install flathub de.haeckerfelix.Fragments
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub com.visualstudio.code
+flatpak install flathub io.github.vikdevelop.SaveDesktop
 
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
