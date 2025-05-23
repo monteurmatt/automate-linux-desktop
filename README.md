@@ -7,6 +7,7 @@
 ---
 
 🔧 Funcionalidades do script
+
 - Instala aplicativos e utilitários populares essenciais no dia a dia
 
 - Prepara o sistema com ferramentas para melhorar a compatibilidade com jogos
@@ -15,7 +16,9 @@
 
 - Adiciona área de ícones para mostrar apps em segundo plano na barra superior
 
-- Adiciona barra inferior com menu, favoritos centralizados e ocultação automática  
+- Adiciona barra inferior centralizada com menu 'iniciar', opção de fixar apps favoritos e ocultação automática quando sobreposta
+
+- Configura atalhos `Super + D` para minimizar e maximizar tudo e `Ctrl + Alt + T` para abrir terminal
 
 <br>
 
