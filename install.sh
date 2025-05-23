@@ -39,6 +39,15 @@ sudo dnf install ranger speedtest-cli btop -y
 # Instalar as fontes da Microsoft
 sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -y
 
+# Configura Super + D para minimizar janelas
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
+
+# Configura Ctrl + Alt + T para abrir terminal (O terminal padrão do Fedora é o Ptyxis)
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ptyxis/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ptyxis/ name 'Abrir Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ptyxis/ command 'ptyxis'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ptyxis/ binding '<Control><Alt>t'
+
 # Instalar ferramentas para jogos
 sudo dnf install steam -y
 flatpak install flathub com.vysp3r.ProtonPlus
