@@ -96,6 +96,7 @@
 |------------------------------|---------------------------------------------------------------------------|
 | `GIMP`                       | Editor de imagens avançado, similar ao Photoshop.                         |
 | `Krita`                      | Aplicativo para pintura digital e ilustração.                             |
+| `Inkscape`                   | Editor de gráficos vetoriais para logotipos, ilustrações etc              |
 
 ---
 
