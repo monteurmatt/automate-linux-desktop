@@ -75,6 +75,7 @@ flatpak install flathub de.haeckerfelix.Fragments
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub com.visualstudio.code
 flatpak install flathub io.github.vikdevelop.SaveDesktop
+flatpak install flathub com.rtosta.zapzap
 
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
