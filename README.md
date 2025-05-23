@@ -108,6 +108,7 @@
 | `OBS Studio`                 | Gravação de tela e transmissões ao vivo.                                  |
 | `Spotify`                    | Cliente de música via streaming.                                          |
 | `Discord`                    | Chat de voz/texto para comunidades e jogos.                               |
+| `Zapzap`                     | Cliente moderno e leve para WhatsApp Web.                                 |
 
 ---
 
