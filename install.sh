@@ -84,7 +84,7 @@ gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 
 # Instalar e habilitar via extensions-cli o 'Start Overlay in Application View' (Super Key para menu de apps)
-sudo dnf install gnome-extensions-cli -y
+pip3 install --user gnome-extensions-cli
 gext install 5040
 gext enable start-overlay-in-application-view@hex_cz
 
