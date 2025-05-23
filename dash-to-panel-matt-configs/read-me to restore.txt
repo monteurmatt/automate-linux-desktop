@@ -1,9 +1,4 @@
-#Para carregar/restaurar as configurações, basta usar o comando abaixo no terminal:   
+#Para carregar/restaurar as configurações, basta usar o comando abaixo no terminal, dentro da pasta onde está o arquivo de backup .txt   
 
+Comando:
 dconf load /org/gnome/shell/extensions/dash-to-panel/  < dash-to-panel-configs-auto.txt
-
-
-
-
-
-obs.: Como utilizo o Fedora em português, a versão manual de configuração com passo a passo do dash-to-panel ficou um pouco bagunçadda, misturando o idioma partes em inglês e partes em português, mas ainda assim é possível implementar pelas similaridades das palavras ou, utilizando a versão automática acima, restaurando o backup de configurações (dash-to-panel-configs-auto.txt).
