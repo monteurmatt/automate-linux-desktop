@@ -30,7 +30,11 @@ Style:
 	Override panel theme gradient: True
 	Gradient top color and opacity: purple [antepenúltima] + 8
 	Gradient bottom color and opacity: black [última] + 20
-	
+
+Behavior
+	[Overview]
+	- Disable show overview on startup: True
+
 Fine-tune
 	[Gnome functionality]
 	Manter o painel superior original do gnome-shell: True
