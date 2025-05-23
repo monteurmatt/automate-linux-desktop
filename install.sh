@@ -23,7 +23,7 @@ sudo dnf install google-chrome-stable -y
 sudo dnf remove fedora-chromium-config -y
 
 # GIMP e Krita 
-sudo dnf install gimp krita -y
+sudo dnf install gimp krita inkscape -y
 
 # Docker e Docker Compose 
 sudo dnf install docker docker-compose -y
