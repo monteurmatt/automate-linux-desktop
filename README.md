@@ -86,6 +86,7 @@
 | `start-overlay-in-application-view` | Extensão para transformar tecla Super de workspaces para menu de apps.|
 | `msttcore-fonts-installer`   | Instala fontes TrueType da Microsoft (como Arial e Times).                |
 | `Google Chrome`              | Navegador web popular do Google                                           |
+| `SaveDesktop`                | Faz backup e restaura o layout do desktop, painéis e personalizações.     |
 
 ---
 
