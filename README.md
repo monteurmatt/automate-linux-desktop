@@ -87,6 +87,11 @@
 | `msttcore-fonts-installer`   | Instala fontes TrueType da Microsoft (como Arial e Times).                |
 | `Google Chrome`              | Navegador web popular do Google                                           |
 | `SaveDesktop`                | Faz backup e restaura o layout do desktop, painéis e personalizações.     |
+| `Brave`                      | Navegador rápido, com foco em privacidade e bloqueio de anúncios.         |
+| `Thunderbird`                | Cliente de e-mails completo, com suporte a múltiplas contas e calendário. |
+| `Cryptomator`                | Criptografia de arquivos locais para manter no dispositivo ou enviar para nuvem.|
+| `PowerISO`                   | Manipulação de arquivos ISO, criação e extração de imagens de disco.      |
+| `qBittorrent`                | Cliente de torrent leve e sem anúncios, com interface simples.            |
 
 ---
 
