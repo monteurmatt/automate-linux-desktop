@@ -16,11 +16,11 @@ sudo dnf install amrnb amrwb faad2 flac gpac-libs lame libde265 libfc14audiodeco
 # Instalar o GNOME Tweaks para configurar o botão de minimizar
 sudo dnf install gnome-tweaks -y
 
-# Instalar o Google Chrome (e remover o aviso de gerenciado pela organização)
-sudo dnf install fedora-workstation-repositories -y
-sudo dnf config-manager --set-enabled google-chrome
-sudo dnf install google-chrome-stable -y
-sudo dnf remove fedora-chromium-config -y
+# Instalar o Google Chrome (e remover o aviso de gerenciado pela organização) (Descomente se quiser baixar o chrome)
+# sudo dnf install fedora-workstation-repositories -y
+# sudo dnf config-manager --set-enabled google-chrome
+# sudo dnf install google-chrome-stable -y
+# sudo dnf remove fedora-chromium-config -y
 
 # GIMP e Krita 
 sudo dnf install gimp krita inkscape -y
@@ -36,6 +36,9 @@ sudo dnf install python3 python3-pip -y
 # Instalar utilitários para terminal
 sudo dnf install ranger speedtest-cli btop -y
 
+# Intalar gestor de e-mails e torrents
+sudo dnf install qbittorrent thunderbird
+
 # Instalar as fontes da Microsoft
 sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -y
 
@@ -50,33 +53,34 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 
 # Instalar ferramentas para jogos
 sudo dnf install steam -y
-flatpak install flathub com.vysp3r.ProtonPlus
-flatpak install flathub net.davidotek.pupgui2
-flatpak install flathub com.steamgriddb.steam-rom-manager
-flatpak install flathub com.steamgriddb.SGDBoop
-flatpak install flathub com.usebottles.bottles
-flatpak install flathub com.heroicgameslauncher.hgl
-flatpak install flathub dev.lizardbyte.app.Sunshine
-flatpak install flathub net.lutris.Lutris
+flatpak install flathub com.vysp3r.ProtonPlus -y
+flatpak install flathub net.davidotek.pupgui2 -y
+flatpak install flathub com.steamgriddb.steam-rom-manager -y
+flatpak install flathub com.steamgriddb.SGDBoop -y
+flatpak install flathub com.usebottles.bottles -y
+flatpak install flathub com.heroicgameslauncher.hgl -y
+flatpak install flathub dev.lizardbyte.app.Sunshine -y
+flatpak install flathub net.lutris.Lutris -y
 
 
 # Instalar aplicativos em flatpak
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub com.spotify.Client
-flatpak install flathub com.obsproject.Studio
-flatpak install flathub io.github.celluloid_player.Celluloid
-flatpak install flathub org.gnome.Boxes
-flatpak install flathub com.mattjakeman.ExtensionManager
-flatpak install flathub com.github.tchx84.Flatseal
-flatpak install flathub org.nickvision.tubeconverter
-flatpak install flathub org.localsend.localsend_app
-flatpak install flathub page.codeberg.libre_menu_editor.LibreMenuEditor
-flatpak install flathub de.haeckerfelix.Fragments
-flatpak install flathub com.discordapp.Discord
-flatpak install flathub com.visualstudio.code
-flatpak install flathub io.github.vikdevelop.SaveDesktop
-flatpak install flathub com.rtosta.zapzap
-
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub com.spotify.Client -y
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub io.github.celluloid_player.Celluloid -y
+flatpak install flathub org.gnome.Boxes -y
+flatpak install flathub com.mattjakeman.ExtensionManager -y
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub org.nickvision.tubeconverter -y
+flatpak install flathub org.localsend.localsend_app -y
+flatpak install flathub page.codeberg.libre_menu_editor.LibreMenuEditor -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub com.visualstudio.code -y
+flatpak install flathub io.github.vikdevelop.SaveDesktop -y
+flatpak install flathub com.rtosta.zapzap -y
+flatpak install flathub org.cryptomator.Cryptomator -y
+flatpak install flathub com.poweriso.PowerISO -y
+flatpak install flathub com.brave.Browser -y
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
 sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel -y
@@ -89,7 +93,5 @@ gext install 5040
 gext enable start-overlay-in-application-view@hex_cz
 
 
-
-# Instalar as fontes que estão na pasta: Fontes
-# Aplicativos para instalar depois manualmente: DaVinci Resolve, Figma for Desktop, Insync
-# Ajustar os problemas do DaVinci Resolve segundo esse tutorial: https://github.com/H3rz3n/Davinci-Resolve-Fedora-38-39-40-Fix
+# Aplicativos para instalar manualmente após instalações dos apps acima: DaVinci Resolve
+# Para ajustar problemas do DaVinci Resolve: https://github.com/H3rz3n/Davinci-Resolve-Fedora-38-39-40-Fix
