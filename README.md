@@ -92,6 +92,9 @@
 | `Cryptomator`                | Criptografia de arquivos locais para manter no dispositivo ou enviar para nuvem.|
 | `PowerISO`                   | Manipulação de arquivos ISO, criação e extração de imagens de disco.      |
 | `qBittorrent`                | Cliente de torrent leve e sem anúncios, com interface simples.            |
+| `clipboard-indicator`        | Extensão que adiciona um gerenciador de clipboard na bandeja (tray)       |
+
+
 
 ---
 
