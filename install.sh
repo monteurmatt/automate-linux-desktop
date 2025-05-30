@@ -91,6 +91,8 @@ gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 pip3 install --user gnome-extensions-cli
 gext install 5040
 gext enable start-overlay-in-application-view@hex_cz
+gext install 779
+gext enable clipboard-indicator@tudmotu.com
 
 
 # Aplicativos para instalar manualmente após instalações dos apps acima: DaVinci Resolve
