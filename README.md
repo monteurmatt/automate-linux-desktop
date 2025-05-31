@@ -1,4 +1,4 @@
-# Automate-Fedora ⚙️
+# Automate-linux-desktop ⚙️
 ### Script que realiza automações para instalação de apps via DNF, Flatpak e Gext  
 
 *`install.sh` para baixar apps necessários*  
