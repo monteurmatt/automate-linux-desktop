@@ -36,9 +36,6 @@ sudo dnf install python3 python3-pip -y
 # Instalar utilitários para terminal e Btrfs Assistant
 sudo dnf install ranger btop btrfs-assistant -y
 
-# Intalar gestor de e-mails e torrents
-sudo dnf install qbittorrent thunderbird
-
 # Instalar as fontes da Microsoft
 sudo dnf install https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm -y
 
@@ -81,7 +78,10 @@ flatpak install flathub com.rtosta.zapzap -y
 flatpak install flathub org.cryptomator.Cryptomator -y
 flatpak install flathub com.poweriso.PowerISO -y
 flatpak install flathub com.brave.Browser -y
+flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub com.ulduzsoft.Birdtray -y
+flatpak install flathub org.qbittorrent.qBittorrent
+
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
 sudo dnf install gnome-shell-extension-appindicator gnome-shell-extension-dash-to-panel -y
