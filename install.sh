@@ -22,7 +22,7 @@ sudo dnf install gnome-tweaks -y
 # sudo dnf install google-chrome-stable -y
 # sudo dnf remove fedora-chromium-config -y
 
-# GIMP e Krita 
+# GIMP, Krita e Inkscape
 sudo dnf install gimp krita inkscape -y
 
 # Docker e Docker Compose 
@@ -33,8 +33,8 @@ sudo usermod -aG docker $USER
 # Python3 e pip (pip geralmente vem com python3, mas garante que esteja instalado)
 sudo dnf install python3 python3-pip -y
 
-# Instalar utilitários para terminal
-sudo dnf install ranger speedtest-cli btop -y
+# Instalar utilitários para terminal e Btrfs Assistant
+sudo dnf install ranger btop btrfs-assistant -y
 
 # Intalar gestor de e-mails e torrents
 sudo dnf install qbittorrent thunderbird
@@ -96,4 +96,4 @@ gext enable clipboard-indicator@tudmotu.com
 
 
 # Aplicativos para instalar manualmente após instalações dos apps acima: DaVinci Resolve
-# Para ajustar problemas do DaVinci Resolve: https://github.com/H3rz3n/Davinci-Resolve-Fedora-38-39-40-Fix
+# Para ajustar problemas do DaVinci Resolve: https://github.com/monteurmatt/install-davinci-resolve
