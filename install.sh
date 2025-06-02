@@ -81,6 +81,8 @@ flatpak install flathub com.brave.Browser -y
 flatpak install flathub org.mozilla.Thunderbird -y
 flatpak install flathub com.ulduzsoft.Birdtray -y
 flatpak install flathub org.qbittorrent.qBittorrent -y
+flatpak install flathub org.gnome.gedit -y
+
 
 
 # Instalar e habilitar no ExtensionManager a bandeja de apps em 2 plano e barra inferior fixa
