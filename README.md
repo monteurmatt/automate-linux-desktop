@@ -93,7 +93,7 @@
 | `PowerISO`                   | Manipulação de arquivos ISO, criação e extração de imagens de disco.      |
 | `qBittorrent`                | Cliente de torrent leve e sem anúncios, com interface simples.            |
 | `clipboard-indicator`        | Extensão que adiciona um gerenciador de clipboard na bandeja (tray)       |
-
+| `Birdtray`                   | Extensão para deixar cliente de e-mails Thunderbird minimizado em 2 plano |
 
 
 ---
