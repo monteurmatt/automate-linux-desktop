@@ -2,35 +2,59 @@
 
 #-----------------------------------------------------
 
-#Instalando repositório adicional packman
-OS_RELEASE_VER=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2 | tr -d '"')
+#Adiciona repositório packman, melhora a velocidade de download do zypper e atualiza.
 
+# Carrega as variáveis de /etc/os-release (ID, VERSION_ID, etc.)
+# Usando '.' para maior portabilidade POSIX em arquivos .sh
+. /etc/os-release
+
+echo "--- Configurando zypp para conexões mais rápidas ---"
 sudo sed -i '/^#\?download.max_concurrent_connections/c\download.max_concurrent_connections = 10' /etc/zypp/zypp.conf
 if ! grep -q "download.max_concurrent_connections" /etc/zypp/zypp.conf; then
     echo "download.max_concurrent_connections = 10" | sudo tee -a /etc/zypp/zypp.conf > /dev/null
 fi
-sudo zypper refresh
-if [ "$OS_RELEASE_VER" == "tumbleweed" ]; then
+
+echo "--- Atualizando repositórios ---"
+sudo zypper refresh -f # Força a atualização dos metadados
+
+echo "--- Atualizando o sistema operacional base ---"
+# Slowroll e Tumbleweed usam 'dup'. Leap usa 'update'.
+if [ "$ID" = "opensuse-tumbleweed" ] || [ "$ID" = "opensuse-slowroll" ]; then
     sudo zypper dup --no-allow-vendor-change -y
-else
+elif [ "$ID" = "opensuse-leap" ]; then
     sudo zypper update -y
-fi
-PACKMAN_REPO_URL=""
-if [ "$OS_RELEASE_VER" == "tumbleweed" ]; then
-    PACKMAN_REPO_URL="https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/"
-elif [[ "$OS_RELEASE_VER" =~ ^15 ]]; then # Para openSUSE Leap 15.x
-    PACKMAN_REPO_URL="https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_${OS_RELEASE_VER}/"
 else
-    log_message "Versão do openSUSE não detectada para Packman. Adicione manualmente se necessário."
+    echo "AVISO: ID do sistema ($ID) não reconhecido para atualização inicial. Tentando 'zypper dup' como padrão seguro."
+    sudo zypper dup --no-allow-vendor-change -y 
+fi
+
+echo "--- Configurando o repositório Packman ---"
+PACKMAN_REPO_URL=""
+# Slowroll usa o repositório Packman do Tumbleweed
+if [ "$ID" = "opensuse-tumbleweed" ] || [ "$ID" = "opensuse-slowroll" ]; then
+    PACKMAN_REPO_URL="https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/"
+elif [ "$ID" = "opensuse-leap" ]; then
+    PACKMAN_REPO_URL="https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_${VERSION_ID}/"
+else
+    echo "AVISO: ID do sistema ($ID) não reconhecido para configuração automática do Packman. Adicione manualmente se necessário."
 fi
 
 if [ -n "$PACKMAN_REPO_URL" ]; then
+    echo "Adicionando repositório Packman de: $PACKMAN_REPO_URL"
+    sudo zypper rr packman 2>/dev/null || true 
     sudo zypper ar -cfp 90 "$PACKMAN_REPO_URL" packman
-    sudo zypper --gpg-auto-import-keys refresh
-    sudo zypper dup --allow-vendor-change -y
+    
+    echo "--- Atualizando metadados dos repositórios (incluindo Packman) e importando chaves ---"
+    sudo zypper --gpg-auto-import-keys refresh -f
+    
+    echo "--- Realizando 'zypper dup' para permitir mudança de fornecedor para o Packman ---"
+    sudo zypper dup --from packman --allow-vendor-change -y
 else
-    log_message "Não foi possível adicionar o repositório Packman automaticamente para sua versão do openSUSE."
+    echo "ERRO: Não foi possível determinar a URL do Packman para o seu sistema ($ID - $VERSION_ID)."
+    echo "Você precisará adicionar o repositório Packman manualmente e rodar 'sudo zypper dup --allow-vendor-change -y'."
 fi
+
+echo "--- Configuração do Packman e atualização do sistema concluídas ---"
 
 #-----------------------------------------------------
 
@@ -69,7 +93,7 @@ sudo zypper install -y sof-firmware
 
 
 #Remover mini-games e apps indesejados
-sudo zypper remove -y gnome-chess gnome-mahjongg gnome-mines gnome-sudoku iagno lightsoff quadrapassel swell-foop xscreensaver transmission-gtk tigervnc eog xterm
+sudo zypper remove -y gnome-chess gnome-mahjongg gnome-mines gnome-sudoku iagno lightsoff quadrapassel swell-foop xscreensaver transmission-gtk tigervnc eog xterm gimp
 
 
 # Docker e Docker Compose 
@@ -83,47 +107,46 @@ sudo zypper install -y python3 python3-pip
 
 
 # Instalar utilitários para terminal
-sudo zypper install -y ranger btop 
+sudo zypper install -y gnome-terminal ranger btop 
 
 
 # Instalar ferramentas para jogos
-sudo flatpak install -y flathub com.valvesoftware.Steam; \
-sudo flatpak install -y flathub com.vysp3r.ProtonPlus; \
-sudo flatpak install -y flathub net.davidotek.pupgui2; \
-sudo flatpak install -y flathub com.steamgriddb.steam-rom-manager; \
-sudo flatpak install -y flathub com.steamgriddb.SGDBoop; \
-sudo flatpak install -y flathub com.usebottles.bottles; \
-sudo flatpak install -y flathub com.heroicgameslauncher.hgl; \
-sudo flatpak install -y flathub dev.lizardbyte.app.Sunshine; \ 
-sudo flatpak install -y flathub net.lutris.Lutris;
-
+flatpak install --user -y flathub com.valvesoftware.Steam; \
+flatpak install --user -y flathub com.vysp3r.ProtonPlus; \
+flatpak install --user -y flathub net.davidotek.pupgui2; \
+flatpak install --user -y flathub com.steamgriddb.steam-rom-manager; \
+flatpak install --user -y flathub com.steamgriddb.SGDBoop; \
+flatpak install --user -y flathub com.usebottles.bottles; \
+flatpak install --user -y flathub com.heroicgameslauncher.hgl; \
+flatpak install --user -y flathub dev.lizardbyte.app.Sunshine; \
+flatpak install --user -y flathub net.lutris.Lutris; \
 
 # Instalar aplicativos em flatpak
-sudo flatpak install -y flathub com.discordapp.Discord; \
-sudo flatpak install -y flathub com.spotify.Client; \
-sudo flatpak install -y flathub com.obsproject.Studio; \
-sudo flatpak install -y flathub io.github.celluloid_player.Celluloid; \
-sudo flatpak install -y flathub org.gnome.Boxes; \
-sudo flatpak install -y flathub com.mattjakeman.ExtensionManager; \
-sudo flatpak install -y flathub com.github.tchx84.Flatseal; \
-sudo flatpak install -y flathub org.nickvision.tubeconverter; \
-sudo flatpak install -y flathub org.localsend.localsend_app; \
-sudo flatpak install -y flathub page.codeberg.libre_menu_editor.LibreMenuEditor; \
-sudo flatpak install -y flathub com.discordapp.Discord; \
-sudo flatpak install -y flathub com.visualstudio.code; \
-sudo flatpak install -y flathub io.github.vikdevelop.SaveDesktop; \
-sudo flatpak install -y flathub com.rtosta.zapzap; \
-sudo flatpak install -y flathub org.cryptomator.Cryptomator; \
-sudo flatpak install -y flathub com.poweriso.PowerISO; \
-sudo flatpak install -y flathub com.brave.Browser; \
-sudo flatpak install -y flathub org.mozilla.Thunderbird; \
-sudo flatpak install -y flathub com.ulduzsoft.Birdtray; \
-sudo flatpak install -y flathub org.qbittorrent.qBittorrent; \
-sudo flatpak install -y flathub org.gnome.gedit; \
-sudo flatpak install -y flathub org.gimp.GIMP; \
-sudo flatpak install -y flathub org.kde.krita; \ 
-sudo flatpak install -y flathub org.inkscape.Inkscape; \
-sudo flatpak install -y flathub org.gnome.gThumb;
+flatpak install --user -y flathub com.discordapp.Discord; \
+flatpak install --user -y flathub com.spotify.Client; \
+flatpak install --user -y flathub com.obsproject.Studio; \
+flatpak install --user -y flathub io.github.celluloid_player.Celluloid; \
+flatpak install --user -y flathub org.gnome.Boxes; \
+flatpak install --user -y flathub com.mattjakeman.ExtensionManager; \
+flatpak install --user -y flathub com.github.tchx84.Flatseal; \
+flatpak install --user -y flathub org.nickvision.tubeconverter; \
+flatpak install --user -y flathub org.localsend.localsend_app; \
+flatpak install --user -y flathub page.codeberg.libre_menu_editor.LibreMenuEditor; \
+flatpak install --user -y flathub com.discordapp.Discord; \
+flatpak install --user -y flathub com.visualstudio.code; \
+flatpak install --user -y flathub io.github.vikdevelop.SaveDesktop; \
+flatpak install --user -y flathub com.rtosta.zapzap; \
+flatpak install --user -y flathub org.cryptomator.Cryptomator; \
+flatpak install --user -y flathub com.poweriso.PowerISO; \
+flatpak install --user -y flathub com.brave.Browser; \
+flatpak install --user -y flathub org.mozilla.Thunderbird; \
+flatpak install --user -y flathub com.ulduzsoft.Birdtray; \
+flatpak install --user -y flathub org.qbittorrent.qBittorrent; \
+flatpak install --user -y flathub org.gnome.gedit; \
+flatpak install --user -y flathub org.gimp.GIMP; \
+flatpak install --user -y flathub org.kde.krita; \
+flatpak install --user -y flathub org.inkscape.Inkscape; \
+flatpak install --user -y flathub org.gnome.gThumb
 
 
 
@@ -139,26 +162,24 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 
 
 
-#Instalar pipx para baixar gnome-extensions-cli para habilitar o gext
-pip3 install --user pipx
-~/.local/bin/pipx ensurepath
-source ~/.bashrc
+## Instalar pipx via zypper e gnome-extensions-cli via pipx
+sudo zypper install -y python3-pipx 
 pipx install gnome-extensions-cli
-echo 'alias gext="gnome-extensions-cli"' >> ~/.bashrc
-source ~/.bashrc
+pipx ensurepath
+export PATH="$HOME/.local/bin:$PATH"
 
 
 # Instalar extensões GNOME Shell
-gext install 615 # AppIndicator
-gext install 307 # Dash to Dock
-#gext install 1160 # Dash to Panel --> substituido pela extensão acima 'dash-to-dock'
-gext install 5040 # Start Overlay in Application View
-gext install 779 # Clipboard Indicator
-gext install 3193 # Blur My Shell
+gnome-extensions-cli install 615 # AppIndicator
+gnome-extensions-cli install 307 # Dash to Dock
+#gnome-extensions-cli install 1160 # Dash to Panel --> substituido pela extensão acima 'dash-to-dock'
+gnome-extensions-cli install 5040 # Start Overlay in Application View
+gnome-extensions-cli install 779 # Clipboard Indicator
+gnome-extensions-cli install 3193 # Blur My Shell
 
 # Habilitar extensões GNOME Shell
-gext enable appindicatorsupport@rgcjonas.gmail.com
-gext enable dash-to-dock@micxgx.gmail.com
-gext enable start-overlay-in-application-view@hex_cz
-gext enable clipboard-indicator@tudmotu.com
-gext enable blur-my-shell@aunetx
+gnome-extensions-cli enable appindicatorsupport@rgcjonas.gmail.com
+gnome-extensions-cli enable dash-to-dock@micxgx.gmail.com
+gnome-extensions-cli enable start-overlay-in-application-view@hex_cz
+gnome-extensions-cli enable clipboard-indicator@tudmotu.com
+gnome-extensions-cli enable blur-my-shell@aunetx
