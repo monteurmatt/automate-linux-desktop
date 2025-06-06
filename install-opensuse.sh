@@ -142,7 +142,6 @@ flatpak install --user -y flathub com.brave.Browser; \
 flatpak install --user -y flathub org.mozilla.Thunderbird; \
 flatpak install --user -y flathub com.ulduzsoft.Birdtray; \
 flatpak install --user -y flathub org.qbittorrent.qBittorrent; \
-flatpak install --user -y flathub org.gnome.gedit; \
 flatpak install --user -y flathub org.gimp.GIMP; \
 flatpak install --user -y flathub org.kde.krita; \
 flatpak install --user -y flathub org.inkscape.Inkscape; \
@@ -154,11 +153,12 @@ flatpak install --user -y flathub org.gnome.gThumb
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 
 
-# Cria o atalho personalizado Ctrl+Alt+T para abrir o GNOME Terminal
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gnome-terminal/']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gnome-terminal/ name 'Abrir Terminal'
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gnome-terminal/ command 'gnome-terminal'
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gnome-terminal/ binding '<Control><Alt>t'
+# Cria o atalho personalizado Super + T para abrir o GNOME Terminal
+KEYBINDING_PATH="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['$KEYBINDING_PATH']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$KEYBINDING_PATH name 'Abrir Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$KEYBINDING_PATH command 'gnome-terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:$KEYBINDING_PATH binding '<Super>t'
 
 
 
