@@ -2,6 +2,7 @@
 
 #-----------------------------------------------------
 
+
 #Adiciona repositório packman, melhora a velocidade de download do zypper e atualiza.
 
 # Carrega as variáveis de /etc/os-release (ID, VERSION_ID, etc.)
@@ -56,10 +57,10 @@ fi
 
 echo "--- Configuração do Packman e atualização do sistema concluídas ---"
 
+
 #-----------------------------------------------------
 
 
-#-----------------------------------------------------
 #Diminuir Swappiness 
 SWAPPINESS_VALUE=1
 CONF_FILE="/etc/sysctl.d/99-swappiness.conf"
@@ -71,6 +72,8 @@ sudo rm -f "$CONF_FILE"
 # Criando um novo arquivo de configuração para o swappiness
 echo "vm.swappiness = $SWAPPINESS_VALUE" | sudo tee "$CONF_FILE" > /dev/null
 sudo sysctl -p "$CONF_FILE"
+
+
 #-----------------------------------------------------
 
 
