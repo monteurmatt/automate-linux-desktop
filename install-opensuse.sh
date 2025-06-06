@@ -4,9 +4,6 @@
 
 
 #Adiciona repositório packman, melhora a velocidade de download do zypper e atualiza.
-
-# Carrega as variáveis de /etc/os-release (ID, VERSION_ID, etc.)
-# Usando '.' para maior portabilidade POSIX em arquivos .sh
 . /etc/os-release
 
 echo "--- Configurando zypp para conexões mais rápidas ---"
