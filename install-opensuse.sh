@@ -145,8 +145,8 @@ flatpak install --user -y flathub org.qbittorrent.qBittorrent; \
 flatpak install --user -y flathub org.gimp.GIMP; \
 flatpak install --user -y flathub org.kde.krita; \
 flatpak install --user -y flathub org.inkscape.Inkscape; \
-flatpak install --user -y flathub org.gnome.gThumb
-
+flatpak install --user -y flathub org.gnome.gThumb; \
+flatpak install --user -y flathub io.gitlab.librewolf-community
 
 
 # Configura Super + D para minimizar janelas
