@@ -88,6 +88,7 @@
 | `Google Chrome`              | Navegador web popular do Google                                           |
 | `SaveDesktop`                | Faz backup e restaura o layout do desktop, painéis e personalizações.     |
 | `Brave`                      | Navegador rápido, com foco em privacidade e bloqueio de anúncios.         |
+| `Librewolf`                  | Navegador focado em privacidade baseado no firefox                        |
 | `Thunderbird`                | Cliente de e-mails completo, com suporte a múltiplas contas e calendário. |
 | `Cryptomator`                | Criptografia de arquivos locais para manter no dispositivo ou enviar para nuvem.|
 | `PowerISO`                   | Manipulação de arquivos ISO, criação e extração de imagens de disco.      |
