@@ -81,7 +81,7 @@ opi codecs -y
 
 #Instalar e Configurar Flatpak
 sudo zypper install -y flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
 #Instalar Fontes da Microsoft
@@ -107,7 +107,7 @@ sudo zypper install -y python3 python3-pip
 
 
 # Instalar utilitários para terminal
-sudo zypper install -y gnome-terminal ranger btop 
+sudo zypper install -y gnome-terminal ranger btop fastfetch
 
 
 # Instalar ferramentas para jogos
