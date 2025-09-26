@@ -5,15 +5,16 @@
 ## Criar container do Fedora para usar o "dnf install"
 toolbox create -y
 
-## Resolve problemas de codecs [Direto no sistema, funciona mas não segue filosofia SilverBlue do Fedora]
+
+## Resolve problemas de codecs [Funciona direto no sistema, mas não segue filosofia SilverBlue do Fedora..]
 #rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 #rpm-ostree install lame faad2 ffmpeg libde265 x264 x265 gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 
-flatpak install -y flathub org.freedesktop.Platform.ffmpeg-full
 
-## Adiciona repositório e instala o Docker
+## Adiciona repositório e instala o Docker [Obs.: Não é necessário, pois SilverBlue contém podman por padrão]
 sudo curl -L -o /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/fedora/docker-ce.repo
 rpm-ostree install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
 
 ## Instala gnome-tweaks para ajustes do gnome
 sudo rpm-ostree install gnome-tweaks
@@ -66,7 +67,6 @@ flatpak install -y flathub org.onlyoffice.desktopeditors;
 
 
 
-
 ## Instalar pipx via dnf e gnome-extensions-cli via pipx
 toolbox run sudo dnf install -y pipx
 toolbox run pipx install gnome-extensions-cli
@@ -90,5 +90,5 @@ toolbox run gnome-extensions-cli enable clipboard-indicator@tudmotu.com
 toolbox run gnome-extensions-cli enable blur-my-shell@aunetx
 
 
-## **************** NECESSÁRIO RODAR O COMANDO ABAIXO PARA ATIVAR O DOCKER DEPOIS DO SISTEMA REINICIADO COM DOCKER NA IMAGEM NOVA ****************
+## **************** !!! NECESSÁRIO RODAR O COMANDO ABAIXO PARA ATIVAR O DOCKER DEPOIS DO SISTEMA REINICIADO COM DOCKER NA IMAGEM NOVA !!! ****************
 #sudo systemctl enable --now docker
